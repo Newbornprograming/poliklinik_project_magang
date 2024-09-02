@@ -49,7 +49,7 @@
     <tbody>
         <!-- Kode PHP untuk menampilkan semua isi dari tabel urut berdasarkan status dan tanggal awal -->
         <?php
-            $result = mysqli_query($mysqli, "SELECT * FROM dataPoli");
+            $result = mysqli_query($mysqli, "SELECT * FROM dataPoli order by id asc");
             $no = 1;
             while ($data = mysqli_fetch_array($result)) {
             ?>

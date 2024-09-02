@@ -60,11 +60,10 @@
                 if ($page == 'pasien') {
                     // For the 'pasien' page, no left navigation is required
                     echo '
-                    <div class="col-md-12">
-                        <h2>' . ucwords($page) . '</h2>'; // Display the page title
+                    <div class="col-md-12">'; // Display the page title
                         include($page . ".php"); // Include the specific page's content
                     echo '</div>';
-                } elseif ($page == 'dokter' || $page == 'profilDokter' || $page == 'jadwalDokter') {
+                } elseif ($page == 'dokter' || $page == 'jadwalDokter') {
                     // For 'dokter', 'profilDokter', and 'jadwalDokter' pages, include left navigation
                     echo '
                     <div class="col-md-3">
@@ -73,15 +72,11 @@
                                 <a class="nav-link ' . (($page == 'dokter') ? 'active' : '') . '" href="index.php?page=dokter">Dashboard Dokter</a> <!-- Doctor Dashboard Link -->
                             </li>
                             <li class="nav-item" role="presentation">
-                                <a class="nav-link ' . (($page == 'profilDokter') ? 'active' : '') . '" href="index.php?page=profilDokter">Profil Dokter</a> <!-- Doctor Profile Link -->
-                            </li>
-                            <li class="nav-item" role="presentation">
                                 <a class="nav-link ' . (($page == 'jadwalDokter') ? 'active' : '') . '" href="index.php?page=jadwalDokter">Jadwal Dokter</a> <!-- Doctor Schedule Link -->
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-9">
-                        <h2>' . ucwords($page) . '</h2>'; // Display the page title
+                    <div class="col-md-9">'; // Display the page title
                         include($page . ".php"); // Include the specific page's content
                     echo '</div>';
                 } elseif ($page == 'admin' || $page == 'dataDokter' || $page == 'dataPoli' || $page == 'dataObat') {
@@ -103,8 +98,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-9">
-                        <h2>' . ucwords($page) . '</h2>'; // Display the page title
+                    <div class="col-md-9">'; // Display the page title
                         include($page . ".php"); // Include the specific page's content
                     echo '</div>';
                 }
